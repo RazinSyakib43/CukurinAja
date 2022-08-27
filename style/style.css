@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border: 0.5px solid red;
 }
 
 nav{
@@ -189,6 +190,62 @@ body{
     flex-basis: 20%;
 }
 
+#tentang-kami > section{
+    display: flex;
+    background-color: #569099;
+    color: #F3FCFD;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+
+
+.cukurin-aja{
+    padding: 20px 20px 40px 40px;
+    flex-basis: 40%;
+}
+
+.cukurin-aja h1{
+    color: #24616d;
+    font-size: 24px;
+    padding: 8px;
+    background-color: #F3FCFD;
+    border-radius: 5px;
+}
+
+.cukurin-aja span{
+    color: #569009;
+}
+
+.informasi-cukurin{
+    padding: 20px 20px 40px 20px;
+    flex-basis: 35%;
+}
+
+.informasi-cukurin h1{
+    padding: 10px 0px;
+}
+
+.informasi-cukurin .detail{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.informasi-cukurin .detail i{
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+
+#biodata{
+    background-color: #24616d;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    flex-basis: 25%;
+
+}
+
 #biodata > section{
     display: flex;
     background-color: #569099;
@@ -213,20 +270,8 @@ body{
     padding-bottom: 20px;
 }
 
-.identitas{
-    padding: 30px;
-}
-
-.identitas h3{
-    margin-bottom: 20px;
-}
-
 .detail{
     margin-bottom: 10px;
-}
-
-.sosial-media{
-    padding: 30px;
 }
 
 footer{
