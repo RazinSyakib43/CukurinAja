@@ -3,17 +3,24 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border: 0.5px solid red;
+}
+
+/* Mengatur font dan background color di tag body */
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3FCFD;
 }
 
 nav{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 30px;
+    padding: 30px 0px;
 }
 
 nav h1{
     color: #24616d;
+    font-size: 30px;
 }
 
 nav span{
@@ -23,6 +30,7 @@ nav span{
 nav ul{
     display: flex;    
     list-style: none;
+    align-items: center;
 }
 
 nav ul li{
@@ -32,39 +40,82 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: #100e10;
+    font-size: 18px;
+    font-weight: 500;
 }
 
-.landing{
+#landing{
     display: flex;
+    flex-direction: row;
+    margin-top: 80px;
 }
 
 .text-heading{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
-.landing h1{
+#landing h1{
     font-size: 40px;
     font-weight: 700;
 }
 
-.landing p{
+#landing p{
     font-size: 22px;
 }
 
-.landing img{
-    width: 50%;
+#landing .button-hero{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    background-color: #24616d;
+    border: 0.01px solid #24616d;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s;     
+    color: #F3FCFD;   
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
-    margin-left: 100px;
-    margin-right: 100px;
+#landing .button-hero:hover{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px 20px;
     background-color: #F3FCFD;
+    border: 0.01px solid #24616d;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s;
+    color: #24616d;
 }
 
+#landing .button-hero a{
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#landing .button-hero a:hover{
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+#landing img{
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Mengatur setiap bagian website atau article memiliki margin-botton agar memiliki jarak antar bagian website */
+#landing, #alasan, #paket, #galeri, #testimoni, #tentang-kami{
+    margin-bottom: 80px;
+}
+
+/* Mengatur rules pada setiap elemen yang dibungkus oleh section dengan id article-title */
 .article-title{
     text-align: center;
     margin-bottom: 50px;
@@ -82,62 +133,92 @@ body{
     color: #100e10;
 }
 
-#alasan h1{
+.all-alasan{
+    display: flex;    
     text-align: center;
-}
-
-.board{
-    display: flex;
+    flex-direction: row;
 }        
 
 .box {
     margin: 5px;
     padding: 20px;
     border-radius: 10px;
+    flex-basis: 25%;
 }
 
-.alasan .box img{
-    width: 150px;
+.box i{
+    font-size: 70px;
+    color: #24616d;
+    margin-bottom: 15px;
+}
+
+.box img{
+    width: 100px;
     display: block;
     margin: auto;
 }
 
-.harga h1{
-    text-align: center;
-    color: #100e10;
-}
-
 .all-harga{
     display: flex;
-    justify-content: space-between;
-    justify-items: center;
-    align-items: center;
+    flex-direction: row;
 }
 
 .list-harga{
     margin: 5px;
+    display: flex;  
+    justify-content: space-between;
+    background-color: #569099;
+    color: #F3FCFD;
+    padding: 15px;
+    border-radius: 5px;
 }
 
-.harga img{
-    width: 300px;
-    margin-right: 100px;
+.paket1{
+    flex-basis: 33%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
-.list-harga h3{
+.paket2{
+    flex-basis: 33%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.paket3{
+    flex-basis: 33%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.nama-paket{
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.harga{
+    padding: 5px;
+}
+
+.list-harga h3 h1{
     color: #100e10;
 }
 
 .all-galeri{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .galeri-box{
-    flex-basis: 25%;
+    flex-basis: 20%;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .galeri-box img{
-    border-radius: 5px;
+    border-radius: 5px;    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .testimoni h1{
@@ -147,82 +228,67 @@ body{
 
 .all-testimoni{
     display: flex;
-    margin: 5px;
+    /* margin: 5px; */
     color: #F3FCFD;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.all-testimoni .pack{
+.all-testimoni .card{
     border-radius: 5px;
     padding: 20px;
-    margin: 5px;
     background-color: #569099;
+    flex-basis: 33%;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
-.all-testimoni .pack h5{
+.all-testimoni .card h4{
+    margin-top: 15px;
     text-align: right;
+    font-size: 18px;
 }
 
-.testi1{
-    flex-basis: 40%;
-}
-
-.testi2{
-    flex-basis: 25%;
-}
-
-.testi3{
-    flex-basis: 35%;
-}
-
-.testi4{
-    flex-basis: 30%;
-}
-
-.testi5{
-    flex-basis: 25%;
-}
-
-.testi6{
-    flex-basis: 25%;
-}
-
-.testi7{
-    flex-basis: 20%;
-}
-
-#tentang-kami > section{
+#tentang-kami .all-about{
     display: flex;
-    background-color: #569099;
+    flex-direction: row;
     color: #F3FCFD;
     border-radius: 10px;
     justify-content: space-between;
 }
 
-
+#tentang-kami .information{
+    display: flex;
+    background-color: #569099;
+    border-radius: 10px;
+    flex-basis: 70%;
+    margin-right: 10px;
+    flex-direction: row;
+    height: 800px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
 .cukurin-aja{
     padding: 20px 20px 40px 40px;
-    flex-basis: 40%;
+    flex-basis: 50%;
 }
 
-.cukurin-aja h1{
-    color: #24616d;
-    font-size: 24px;
-    padding: 8px;
-    background-color: #F3FCFD;
+.cukurin-aja img{
+    width: 180px;
     border-radius: 5px;
 }
 
-.cukurin-aja span{
-    color: #569009;
+.cukurin-aja p{
+    text-align: justify;
 }
 
 .informasi-cukurin{
     padding: 20px 20px 40px 20px;
-    flex-basis: 35%;
+    flex-basis: 50%;
 }
 
-.informasi-cukurin h1{
+.informasi-cukurin h2{
     padding: 10px 0px;
 }
 
@@ -236,30 +302,31 @@ body{
     margin-right: 10px;
 }
 
-
 #biodata{
     background-color: #24616d;
-    padding: 40px;
-    text-align: center;
+    padding: 20px 20px ;
     border-radius: 10px;
-    flex-basis: 25%;
-
+    flex-basis: 30%;
+    color: #F3FCFD;
+    height: 800px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-#biodata > section{
-    display: flex;
-    background-color: #569099;
-    color: #F3FCFD;
-    border-radius: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
+#biodata h2{
+    padding: 10px 0px;
+    text-align: center;
+}
+
+#biodata h3{
+    font-size: 26px;
+}
+
+#biodata .name{
+    text-align: center;
 }
 
 .overview{
-    background-color: #24616d;
-    padding: 40px;
-    text-align: center;
-    border-radius: 10px;
+    margin-top: 20px;
 }
 
 .foto-profil img{    
@@ -274,7 +341,193 @@ body{
     margin-bottom: 10px;
 }
 
+.overview p{
+    margin-bottom: 15px;
+}
+
 footer{
     color: #100e10;
     text-align: center;
+    padding: 20px;
+    border-top: 0.5px solid #ABB6B9;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 575px)  {
+    body{
+        width: none;
+        margin: 0 20px;
+    }
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;    
+        list-style: none;
+        align-items: center;
+    }
+    #landing, #alasan, #paket, #galeri, #testimoni, #tentang-kami{
+        margin-bottom: 40px;
+    }
+    #landing{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 576px)  {
+    body{
+        width: 540px;
+        margin: 0 auto;
+    }
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;    
+        list-style: none;
+        align-items: center;
+    }
+    #landing{
+        margin-top: 10px;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px)  {
+    body{
+        width: 720px;
+        margin: 0 auto;
+    }
+    
+    nav ul li a{
+        text-decoration: none;
+        color: #100e10;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px)  {
+    body{
+        width: 960px;
+        margin: 0 auto;
+
+    }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px)  {
+    body{
+        width: 1140px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1400px)  {
+    body{
+        width: 1320px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    nav{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+    }
+    nav ul li:nth-child(1){
+        margin-left: 0px;
+    }
+    .all-harga{
+        display: flex;
+        flex-direction: column;
+    }
+    #landing{
+        flex-direction: column;
+    }
+
+    #landing img{
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+    #tentang-kami .all-about{
+        display: flex;
+        flex-direction: column;
+        color: #F3FCFD;
+        border-radius: 10px;
+    }
+    
+    #tentang-kami .information{
+        display: flex;
+        background-color: #569099;
+        border-radius: 10px;
+        margin: auto;
+        flex-direction: row;
+        margin-bottom: 10px;
+    }
+
+    .all-galeri{
+        justify-content: space-around;
+    }
+
+    #biodata{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .all-alasan{
+        display: flex;    
+        text-align: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .box{
+        flex-basis: 40%;
+    }
+    #tentang-kami .information{
+        display: flex;
+        background-color: #569099;
+        border-radius: 10px;
+        margin: auto;
+        flex-direction: column;
+    }
+    .cukurin-aja, .informasi-cukurin{
+        padding: 20px;
+    }
+    .all-testimoni .card{
+        border-radius: 5px;
+        padding: 20px;
+        background-color: #569099;
+        flex-basis: 49%;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 801px) {
+    .galeri-box img{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .all-alasan{
+        display: flex;    
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .all-testimoni .card{
+        border-radius: 5px;
+        padding: 20px;
+        background-color: #569099;
+        flex-basis: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 601px) {
+    .galeri-box img{
+        width: 150px;
+    }
 }
